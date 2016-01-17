@@ -1,4 +1,7 @@
 angular.module('app')
-.controller('main.controller', ['$scope',function($scope){
+.controller('MainController', ['$scope','RestaurantListsServices',function($scope,RestaurantListsServices){
 	console.log('test');
+	console.log(RestaurantListsServices.getRestaurantLists());
+	$scope.username = 'World';
+	$scope.res = RestaurantListsServices.getRestaurantLists();
 }]);	

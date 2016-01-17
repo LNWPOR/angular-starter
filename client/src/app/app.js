@@ -5,11 +5,18 @@ import '../styles/main.scss';
 var $ = require('jquery');
 require('angular');
 require('angular-ui-router');
+require('angular-resource');
 
 angular.module('app', [
-	'ui.router'
+	'ui.router',
+	'ngResource'
 ]);
 
 
 require('./route.js');
+
+//controllers
 require('./main/main.controller.js');
+
+//services
+require('./restaurantLists/restaurantLists.services.js');

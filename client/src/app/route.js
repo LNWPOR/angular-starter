@@ -11,7 +11,7 @@ angular.module('app')
   .state('main', {
     url: '/',
     templateUrl: require('./main/main.html'),
-    controller: 'main.controller as MainCtrl'
+    controller: 'MainController'
   });
 
   $urlRouterProvider.otherwise('/');
