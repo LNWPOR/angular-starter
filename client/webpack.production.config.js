@@ -8,7 +8,7 @@ module.exports = {
             path.resolve(__dirname, 'src/app/app.js')
         ],
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, '../server/production'),
         filename: 'bundle.min.js'
     },
     
