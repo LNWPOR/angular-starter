@@ -1,0 +1,13 @@
+@import '../libs/bourbon/app/assets/stylesheets/_bourbon.scss';
+@import '../libs/neat/app/assets/stylesheets/_neat.scss';
+@import './base/_reset.scss';
+@import './base/_variables.scss';
+@import './base/_mixins.scss';
+
+// @import '../app/navbar/navbar.scss'
+
+$colorP :green;
+
+h1{
+	color:$colorP;
+}
