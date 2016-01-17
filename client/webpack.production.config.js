@@ -22,6 +22,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.html$/,
+                loader: 'file?name=templates/[name]-[hash:6].html'
+            },
+            {
                 test: /\.js?$/,
                 loader: 'babel-loader'
             },
