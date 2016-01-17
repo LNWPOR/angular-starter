@@ -10,7 +10,7 @@ module.exports = {
         ],
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.min.js'
+        filename: 'bundle.js'
     },
     
     // Turn on sourcemaps
@@ -58,11 +58,6 @@ module.exports = {
         }),
         new webpack.ResolverPlugin(
             new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-        ),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        })
+        )
     ]
 };
