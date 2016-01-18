@@ -16,8 +16,7 @@ module.exports = {
     // Turn on sourcemaps
     devtool: 'source-map',
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
-        root: [path.join(__dirname, "src/libs")]
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
     },
 
     module: {
@@ -46,7 +45,7 @@ module.exports = {
                 loaders: ["style", "css?sourceMap", "sass?sourceMap"]
             },
             {   
-                test: /\.(png|jpg)$/,
+                test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
                 loader: 'url-loader?limit=8192'
             }
         ]
@@ -55,9 +54,6 @@ module.exports = {
         new HtmlWebpackPlugin({ 
             template: 'src/index.html', // Load a custom template
             inject: 'body' // Inject all scripts into the body
-        }),
-        new webpack.ResolverPlugin(
-            new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-        )
+        })
     ]
 };
