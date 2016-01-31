@@ -3,3 +3,8 @@
 @import './base/_variables.scss';
 @import './base/_mixins.scss';
 
+#test {
+        font-size: 100%;
+        background: url(../images/repeater.jpg);
+        background-color: red;
+    }

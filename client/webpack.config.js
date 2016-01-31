@@ -2,7 +2,6 @@ var path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin');
 
- 
 module.exports = {
     entry: [
             'webpack/hot/dev-server',
@@ -12,7 +11,6 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
     },
-    
     // Turn on sourcemaps
     devtool: 'source-map',
     resolve: {
@@ -27,26 +25,32 @@ module.exports = {
             },
             {
                 test: /\.js?$/,
-                loader: 'babel-loader'
+                loader: 'babel'
             },
             {
                 test: /\.jsx?$/,
-                loader: 'babel-loader'
+                loader: 'babel'
             },
             {   test: /\.ts$/, 
-                loader: 'ts-loader' 
-            },
-            {
-                test: /\.css$/,     
-                loader: 'style-loader!css-loader' 
+                loader: 'ts' 
             },
             {
                 test: /\.scss$/,
-                loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+                include: /src/,
+                loaders: [
+                    'style',
+                    'css',
+                    'autoprefixer?browsers=last 3 versions',
+                    'sass?outputStyle=expanded'
+                ]
             },
-            {   
-                test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
-                loader: 'url-loader?limit=8192'
+            {
+                test: /\.(woff|woff2|ttf|eot)$/,
+                loader: 'file'
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: 'file?name=images/[name]-[hash:6].[ext]'
             }
         ]
     },

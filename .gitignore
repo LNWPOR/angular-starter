@@ -3,3 +3,4 @@
 /client/build
 /client/src/libs
 /server/node_modules
+/server/production
