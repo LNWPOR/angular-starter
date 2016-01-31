@@ -46,7 +46,7 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|ttf|eot)$/,
-                loader: 'file'
+                loader: 'file?name=assets/[name]-[hash:6].[ext]'
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
