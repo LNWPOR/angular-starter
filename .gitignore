@@ -1,6 +1,2 @@
-/client/bower_components
-/client/node_modules
-/client/build
-/client/src/libs
-/server/node_modules
-/server/production
+/node_modules
+/build

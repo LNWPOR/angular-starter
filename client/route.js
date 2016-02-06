@@ -8,12 +8,17 @@ angular.module('app')
   });
 
   $stateProvider
-  .state('main', {
+  .state('app', {
     url: '/',
-    templateUrl: require('./main/main.html'),
-    controller: 'MainController'
+    templateUrl: require('./app/app.html'),
+    controller: 'AppController'
+  })
+  .state('app.home', {
+    url: '/home',
+    templateUrl: require('./app/home/home.html'),
+    controller: 'HomeController'
   });
 
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home');
 
 }]);
